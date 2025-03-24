@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    background-color: #ffffff;
+    font-family: sans-serif;
+    overflow-x: hidden; /* no horizontal scroll needed */
+  }
+
+  .section {
+    min-height: 100vh; /* each section is at least one screen high */
+    width: 100%;       /* full width */
+    position: relative; 
+    /* you can use position: relative so that the absolutely 
+       positioned elements inside can be placed with top/left offsets. */
+  }
+  
+  #section1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .front-laptop-preview {
+    width: 50%; /* or whatever you want */
+    max-width: 600px;
+  }
+  .title-text {
+    margin-top: 20px;
+    font-size: 2rem;
+  }
+  .subtitle-text {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  
