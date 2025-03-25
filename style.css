@@ -5,8 +5,8 @@
   }
 
   body {
-    background-color: #ffffff;
-    font-family: sans-serif;
+    background-color: #efefef;
+    font-family: "Calibri Light", Calibri, sans-serif;
     overflow-x: hidden; /* no horizontal scroll needed */
   }
 
@@ -17,23 +17,291 @@
     /* you can use position: relative so that the absolutely 
        positioned elements inside can be placed with top/left offsets. */
   }
-  
+    
+
   #section1 {
+    position: relative;
+  }
+  
+  .hero {
+    position: absolute;
+    top: 80px;      /* tweak this for vertical placement of the laptop */
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-  }
+    width: 100%;    /* full width */
+    gap: 30px;       /* exactly 20px between image and title */
+  }  
+
   .front-laptop-preview {
-    width: 50%; /* or whatever you want */
+    width: 50vw;
     max-width: 600px;
   }
-  .title-text {
-    margin-top: 20px;
-    font-size: 2rem;
+
+
+  .hero .title-text {
+    font-size: 1.8rem; /* about 40px */
+    margin: 0;
   }
-  .subtitle-text {
+  
+  .hero .subtitle-text {
+    font-size: 1.5rem; /* about 20px */
+    margin: 0;
+  }
+
+
+
+
+
+
+
+
+  /* SECTION 2 DOWNLOAD BUTTONS */
+  #section2 {
+    position: relative;
+  }
+  
+  .btn1, .btn2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px; /* adjust if needed */
+  }
+  
+  .btn1 {
+    top: 200px; /* first button y‑offset */
+  }
+  
+  .btn2 {
+    top: 380px; /* second button y‑offset */
+  }
+
+  
+/* SECTION 3 FEATURES */
+
+#section3 {
+    position: relative; /* allows absolute positioning inside */
+}
+    
+.fitur-title {
+    position: absolute;
+    top: 65px; /* tweak this to match your blueprint’s vertical placement */
+    left: 50%;
+    transform: translateX(-50%); /* center horizontally */
+    font-size: 1.7rem; /* adjust as needed */
+    margin: 0;
+    font-weight: normal; /* or whatever style you want */
+}
+    
+.fitur_analisis-kontekstual-title {
+    position: absolute;
+    top: 230px;      /* tweak until matches blueprint */
+    left: 130px;      /* tweak until matches blueprint */
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+
+.fitur_analisis-kontekstual-desc {
+    position: absolute;
+    top: 280px;      /* 170px (title) + 1.5rem (~24px) + 20px gap */
+    left: 130px;
+    font-size: 1.25rem;
+    margin: 0;
+    max-width: 400px; /* wrap text if it’s long */
+    line-height: 1.4;
+  }
+  
+
+.fitur-display-1 {
+    position: absolute;
+    top: 180px;      /* tweak so top edge aligns with your blueprint */
+    right: 130px;    /* same horizontal offset from right as your text has from left */
+    width: 350px;    /* adjust until it matches blueprint scale */
+  }
+  
+
+.fitur_renungan-title {
+    position: absolute;
+    top: 470px;      /* tweak until it sits just below fitur_display_1.png */
+    right: 150px;    /* same horizontal offset as the image */
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+.fitur_renungan-desc {
+    position: absolute;
+    top: 544px;       /* 470px (title) + ~24px (title height) + 50px gap */
+    right: 150px;
+    font-size: 1.25rem;
+    margin: 0;
+    max-width: 350px; /* wrap if text too long */
+    line-height: 1.4;
+    text-align: justify; /* justify-align the text */
+  }
+  
+.fitur-display-2 {
+    position: absolute;
+    top: 460px;    /* tweak so it sits just above/beside the “Fitur Renungan” title */
+    left: 125px;   /* same left offset as your other left‑aligned content */
+    width: 300px;  /* adjust width until it matches blueprint scale */
+  }
+  
+
+
+
+
+/* SECTION 4 FEATURES */
+
+#section4 {
+    position: relative; /* allows absolute positioning inside */
+}
+
+  .fitur_informasi-title {
+    position: absolute;
+    top: 205px;      /* tweak until matches blueprint */
+    left: 130px;     /* same left offset as section3 text */
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .fitur_informasi-desc {
+    position: absolute;
+    top: 255px;       /* 170px (title) + ~24px title height + 50px gap */
+    left: 130px;
+    font-size: 1.25rem;
+    margin: 0;
+    max-width: 400px;
+    line-height: 1.4;
+  }
+  
+  .fitur-display-3 {
+    position: absolute;
+    top: 170px;    /* tweak this until it lines up with your blueprint */
+    right: 130px;  /* same horizontal offset as other right‑aligned images */
+    width: 300px;  /* adjust size until it matches blueprint */
+  }
+  
+  .fitur-display-4 {
+    position: absolute;
+    top: 460px;    /* tweak until it matches blueprint vertically */
+    left: 130px;   /* same left offset as other left‑aligned content */
+    width: 400px;  /* adjust size to match blueprint */
+  }
+  
+  .fitur_interaksi-title {
+    position: absolute;
+    top: 510px;      /* tweak until it lines up with blueprint */
+    right: 150px;    /* same offset as other right‑aligned text */
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .fitur_interaksi-desc {
+    position: absolute;
+    top: 570px;      /* ~60px below title — adjust as needed */
+    right: 150px;
+    font-size: 1.25rem;
+    margin: 0;
+    max-width: 350px;
+    line-height: 1.4;
+    text-align: justify;
+  }
+  
+
+
+/* SECTION 5 FOOTER */
+
+#section5 {
+    position: relative;
+  }
+  
+  .fitur_multi-korteks-title {
+    position: absolute;
+    top: 210px;    /* tweak until matches blueprint */
+    left: 130px;
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  .fitur_multi-korteks-desc {
+    position: absolute;
+    top: 270px;    /* ~60px below title */
+    left: 130px;
+    font-size: 1.25rem;
+    margin: 0;
+    max-width: 400px;
+    line-height: 1.4;
+  }
+  
+  .fitur-display-5 {
+    position: absolute;
+    top: 160px;    /* tweak until it lines up with the title */
+    right: 130px;  /* same offset as other right‑aligned images */
+    width: 400px;  /* adjust size to match blueprint */
+  }
+  
+
+/* SECTION 6 */
+
+#section6 {
+    position: relative;
+  }
+  
+  .section6-title {
+    position: absolute;
+    top: 60px;            /* tweak until it hugs the top like your blueprint */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 4rem;      /* bump up/down to match blueprint size */
+    margin: 0;
+    font-weight: normal;
+  }
+
+  .footer-bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33%;           /* covers bottom 40% of the section */
+    background-color: #141414;
+  }  
+  
+  .footer-about {
+    position: absolute;
+    top: 40px;      /* tweak vertical offset inside the bar */
+    left: 90px;    /* same left margin as other sections */
+    font-size: 1.5rem;
+    margin: 0;
+    color: white;   /* for legibility on red background */
+  }
+
+  .footer-address {
+    position: absolute;
+    top: 80px;       /* ABOUT is at 40px; +20px gap + approx text height */
+    left: 90px;
     font-size: 1rem;
-    margin-top: 10px;
+    margin: 0;
+    color: white;
+    line-height: 1.4;
+    width: 300px;
+  }
+  
+  .footer-twitter {
+    position: absolute;
+    top: 80px;       /* same vertical offset as “ABOUT” */
+    right: 90px;     /* mirror the left offset */
+    font-size: 1rem;
+    margin: 0;
+    color: white;
+    text-align: right;
+    line-height: 1.4;
+  }
+  
+  .footer-twitter a {
+    color: #2cedff;
+    text-decoration: none;
   }
   
