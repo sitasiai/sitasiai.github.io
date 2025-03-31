@@ -276,15 +276,25 @@
     position: relative;
   }
   
-  .section6-title {
-    position: absolute;
-    top: 60px;            /* tweak until it hugs the top like your blueprint */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 4rem;      /* bump up/down to match blueprint size */
-    margin: 0;
-    font-weight: normal;
-  }
+
+
+
+ /* section6 texts for biaya analisis */ #section6 { position: relative; }
+.biaya-container { position: absolute; top: 100px; 
+    left: 50%; transform: translateX(-50%); text-align: center; z-index: 5; / ensure it sits above the footer-bg if needed */ }
+
+.biaya-title { font-size: 1.8rem; margin: 0; }
+
+.biaya-desc { font-size: 1.25rem; margin: 20px 0; line-height: 1.4; }
+
+.biaya-footer { font-size: 0.9rem; margin: 10px 0; color: #666; }
+
+
+
+
+
+
+
 
   .footer-bg {
     position: absolute;
